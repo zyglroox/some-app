@@ -1,13 +1,17 @@
-<div class="container">
-  <div class="post" *ngFor="let post of posts$">
-    <div class="rating">
-      <button (click)="upVote(post.id)">↑</button>
-      <div> {{post.rating}} </div>
-      <button (click)="downVote(post.id)">↓</button>
-    </div>
-    <div class="content">
-      <h1>{{post.name}}</h1>
-      <p>{{post.text}}</p>
+<div class="page" fxLayout="row">
+  <div fxFlex="25"></div>
+  <div fxFlex="60" class="container">
+    <div fxLayout="row" class="post" *ngFor="let post of posts$">
+      <div fxLayout="column" class="rating">
+        <button flex="auto" (click)="upVote(post.id)">↑</button>
+        <div flex="auto"> {{post.rating}} </div>
+        <button flex="auto" (click)="downVote(post.id)">↓</button>
+      </div>
+      <div  fxLayout="column" class="content">
+        <h1 flex="auto">{{post.name}}</h1>
+        <p flex="auto">{{post.text}}</p>
+      </div>
     </div>
   </div>
+  <div fxFlex></div>
 </div>
