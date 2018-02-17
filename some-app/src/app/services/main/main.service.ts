@@ -5,16 +5,16 @@ import { UUID } from 'angular2-uuid';
 export class MainService {
     posts = [
         {
-            id: '3f69e1e3-e8d1-a436-0d57-b01246cf0a27',
-            name: 'Funny post',
-            text: 'some meme post everyone\'s laughing',
-            rating: 92
-        },
-        {
             id: 'baee8fef-3c43-44af-cf46-77b80ce23e60',
             name: 'Some other funny post',
             text: 'some boyan but maybe ol\' good stuff',
             rating: 0
+        },
+        {
+            id: '3f69e1e3-e8d1-a436-0d57-b01246cf0a27',
+            name: 'Funny post',
+            text: 'some meme post everyone\'s laughing',
+            rating: 92
         },
         {
             id: '00566d93-c29e-4986-d0bf-c4a96432aeb7',
@@ -22,7 +22,7 @@ export class MainService {
             text: 'ples help very interesting situation',
             rating: 204
         }
-      ];
+    ];
 
     constructor() {
     }
@@ -49,7 +49,7 @@ export class MainService {
 
     removePost(id) {
         const index = this.posts.indexOf(this.getPost(id));
-        if (index) {
+        if (index !== -1) {
             this.posts.splice(index, 1);
         }
     }

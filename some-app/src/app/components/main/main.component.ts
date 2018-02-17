@@ -1,4 +1,4 @@
-import { MainService } from './main.service';
+import { MainService } from './../../services/main/main.service';
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/first';
 
